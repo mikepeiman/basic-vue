@@ -2,6 +2,7 @@
   <div id="app">
     <Navbar />
     <img src="./assets/helvetica icons x6-03-500x500.png" width="200">
+    <Blog />
     <router-view/>
   </div>
 </template>
@@ -12,6 +13,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
+import Blog from "./components/Blog";
 
 export default {
   name: "App",
@@ -20,7 +22,8 @@ export default {
     About,
     Contact,
     SignIn,
-    SignUp
+    SignUp,
+    Blog
   },
   data() {
     return {

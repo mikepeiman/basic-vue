@@ -29,8 +29,14 @@ export default {
     };
   },
   methods: {
-    remove(payload) {
-      console.log(payload)
+    remove(thisIndex) {
+      // typically this argument is named 'payload'
+      console.log(thisIndex)
+      this.friends = this.friends.filter((friend, index) => {
+        return thisIndex.index !== index
+        // this one originally, it works:
+        // return (friend ? (thisIndex.index !== index) : none)
+      })
     }
   }
 };
