@@ -7,28 +7,32 @@
 </template>
 
 <script>
-import Navbar from './components/Navbar'
-import About from './components/About'
-import Contact from './components/Contact'
-import SignIn from './components/SignIn'
-import SignUp from './components/SignUp'
-
+import Navbar from "./components/Navbar";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import SignIn from "./components/SignIn";
+import SignUp from "./components/SignUp";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Navbar,
     About,
     Contact,
     SignIn,
     SignUp
+  },
+  data() {
+    return {
+
+    };
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

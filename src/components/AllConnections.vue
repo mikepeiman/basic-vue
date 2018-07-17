@@ -2,8 +2,8 @@
   <div id="all-friends">
     <h2>All Friends</h2>
     <div id="all-friends-list">
-      <li v-for="(friend, index) in friends" :key="index" class="li-connection">
-        {{ friend.name }}
+      <li @click="unfriend(index)" v-for="(friend, index) in friends" :key="index" class="li-connection">
+        {{index}}, {{ friend.name }}
       </li>
     </div>
   </div>
@@ -11,16 +11,16 @@
 
 <script>
 export default {
-  name: "All Connections",
+  name: "AllConnections",
+  props: ['friends'],
   data() {
     return {
-      friends: [
-        { name: "Friend One", online: true },
-        { name: "Friend Two", online: false },
-        { name: "Friend Three", online: true },
-        { name: "Friend Four", online: false }
-      ]
     };
+  },
+  methods: {
+    unfriend(index) {
+      this.$emit('unfriend', { index })
+    }
   }
 };
 </script>

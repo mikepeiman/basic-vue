@@ -1,33 +1,45 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <AllConnections />
-    <OnlineConnections />
+    <AllConnections :friends="friends" @unfriend="remove" />
+    <OnlineConnections :friends="friends" />
    
   </div>
 </template>
 
 <script>
-import AllConnections from './AllConnections'
-import OnlineConnections from './OnlineConnections'
+import AllConnections from "./AllConnections";
+import OnlineConnections from "./OnlineConnections";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     AllConnections,
     OnlineConnections
   },
-  data () {
+  data() {
     return {
-      msg: 'Welcome, Mike'
+      msg: "Welcome, Mike",
+      friends: [
+        { name: "Friend One", online: true },
+        { name: "Friend Two", online: false },
+        { name: "Friend Three", online: true },
+        { name: "Friend Four", online: false }
+      ]
+    };
+  },
+  methods: {
+    remove(payload) {
+      console.log(payload)
     }
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
+<style>
+h1,
+h2 {
   font-weight: normal;
 }
 ul {
@@ -37,6 +49,11 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
+  border-bottom: 1px solid rgba(0,0,0,0);
+}
+li:hover {
+  border-bottom: 1px solid rgba(50,100,255,0.75);
+  cursor: pointer;
 }
 a {
   color: #42b983;
