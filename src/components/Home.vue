@@ -1,9 +1,9 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <AllConnections :friends="friends" @unfriend="remove" />
-    <OnlineConnections :friends="friends" />
-   
+    <!-- <h1>{{ msg }}</h1> -->
+    <!-- <AllConnections :friends="friends" @unfriend="remove" /> -->
+    <!-- <OnlineConnections :friends="friends" /> -->
+   <h1>Home Page</h1>
   </div>
 </template>
 
@@ -44,6 +44,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+  /* body {
+    background: url("C:/Users/Mike/Desktop/udemy-vue-firebase/basic-vue/src/assets/catalyst-linkedin-bg-2.png")
+  }  */
 h1,
 h2 {
   font-weight: normal;

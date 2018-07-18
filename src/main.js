@@ -6,6 +6,14 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+// create global filter
+Vue.filter('snippet', function(val) {
+  if(!val || typeof(val) !== 'string') {
+    return ''
+  }
+  return val.slice(0,125)
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

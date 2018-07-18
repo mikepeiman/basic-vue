@@ -2,7 +2,6 @@
   <div id="app">
     <Navbar />
     <img src="./assets/helvetica icons x6-03-500x500.png" width="200">
-    <Blog />
     <router-view/>
   </div>
 </template>
@@ -34,13 +33,19 @@ export default {
 </script>
 
 <style>
+body {
+  background: url("./assets/quote-bg-1.jpg") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: white;
   margin-top: 60px;
+  /* background-image: url("C:/Users/Mike/Desktop/udemy-vue-firebase/basic-vue/src/assets/catalyst-linkedin-bg-2.png"); */
 }
 li {
   display: inline-block;

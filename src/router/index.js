@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import About from '@/components/About'
 import Contact from '@/components/Contact'
+import Blog from '@/components/Blog'
 import SignIn from '@/components/SignIn'
 import SignUp from '@/components/SignUp'
 
@@ -24,6 +25,11 @@ export default new Router({
       path: '/contact',
       name: 'Contact',
       component: Contact
+    },
+    {
+      path: '/blog',
+      name: 'Blog',
+      component: Blog
     },
     {
       path: '/sign-up',
